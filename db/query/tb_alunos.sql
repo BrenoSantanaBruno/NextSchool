@@ -1,3 +1,5 @@
+IF
+
 -- name: CreateAccount :one
 INSERT INTO tb_alunos  (
     desnome,

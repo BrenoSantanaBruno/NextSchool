@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    container_name: node.js
+    ports:
+      - 443:443
+      - 80:80
+    depends_on:
+      - db
+    volumes:
+      - /app:/app
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 10152030
+    volumes:
+      - /db:/var/lib/postgresql/data
+
