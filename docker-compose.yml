@@ -7,15 +7,15 @@ services:
     ports:
       - 443:443
       - 80:80
-    depends_on:
-      - db
     volumes:
-      - /app:/app
+      - /Users/breno/GolandProjects/Projeto Escola/app:/home/node/app
   db:
     image: postgres
     restart: always
     environment:
       POSTGRES_PASSWORD: 10152030
     volumes:
-      - /db:/var/lib/postgresql/data
+      - /Users/breno/GolandProjects/Projeto Escola/db:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
 
